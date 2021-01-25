@@ -15,7 +15,6 @@
     </div>
 
     <div>
-        <!-- <h3> {{ aPlusMethod(1,1) }} </h3> -->
         <h3> {{ aPlusMethod() }} </h3>
     </div>
 
@@ -45,14 +44,6 @@
             },
             toggleMethod() {
                 this.myBoolean = !this.myBoolean;
-            },
-            // aPlusMethod(a,b){
-            //     console.log('aPlusMethod has been triggered!');
-            //     return a+b;
-            // }
-            aPlusMethod(){
-                console.log('aPlusMethod had been triggered!');
-                return this.name1 + this.name2;
             }
         },
         computed: {
