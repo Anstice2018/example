@@ -1,7 +1,28 @@
 <template>
+
     <div>
-        <h3> {{ variable1(1,1) }} </h3>
+        <h3> {{ name1 }} </h3>
     </div>
+
+    <div>
+        <h3> {{ aPasswordMethod('abc123') }} </h3>
+    </div>
+
+    <div>
+        <h3> {{ myBoolean }} </h3>
+        <button v-on:click="toggleMethod()"> 
+          切換 </button>
+    </div>
+
+    <div>
+        <!-- <h3> {{ aPlusMethod(1,1) }} </h3> -->
+        <h3> {{ aPlusMethod() }} </h3>
+    </div>
+
+    <div>
+        <h3> {{ allData }} </h3>
+    </div>
+
 </template>
 
 <script>
@@ -15,31 +36,35 @@
             }
         },
         methods: {
-            toggleMethod() {
-                this.myboolean = !this.myboolean
-            },
-            aPlusMethod(a, b){
-                return{
-                    a+b;
+            aPasswordMethod(someText){
+                if (someText === 'abc123'){
+                  return 'success';
+                }else{
+                  return 'failed';
                 }
+            },
+            toggleMethod() {
+                this.myBoolean = !this.myBoolean;
+            },
+            // aPlusMethod(a,b){
+            //     console.log('aPlusMethod has been triggered!');
+            //     return a+b;
+            // }
+            aPlusMethod(){
+                console.log('aPlusMethod had been triggered!');
+                return this.name1 + this.name2;
             }
         },
         computed: {
-            variable1(a, b) {
-                return {
-                    a+b;
-                }
+            allData() {
+                console.log('allData had been triggered!');
+                return this.name1 + this.name2;
             }
         },
         watch: {
             myBoolean(){
-                alert('myBoolean has been changed!');
-            },
-            aPlusMethod(){
-                alert('aPlusMethod has been triggered!');
+                alert('myBoolean had been changed!');
             }
         }
-    }
+    };
 </script>
-
-
