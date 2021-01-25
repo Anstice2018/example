@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3> {{ name1 }} </h3>
+        <h3> {{ aPlusMethod(1,1) }} </h3>
     </div>
 </template>
 
