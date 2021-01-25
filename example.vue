@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h3> {{ aPlusMethod(1,1) }} </h3>
+        <h3> {{ myBoolean }} </h3>
+        <button v-on:click="toggleMethod()"> 切換 </button>
     </div>
 </template>
 
