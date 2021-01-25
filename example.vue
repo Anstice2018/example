@@ -1,27 +1,8 @@
 <template>
-.
-.
+    <div>
+        <h3> {{ name1 }} </h3>
+    </div>
 </template>
-
-<script>
-.
-.
-</script> 
-
-<style>
-.
-.
-</style> 
-
-
-
-<template>
-<div>
-<h3> hello </h3>
-</div>
-</template>
-
-
 
 <script>
     export default{
