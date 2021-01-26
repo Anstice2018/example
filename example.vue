@@ -1,31 +1,18 @@
 <template>
-
-    <div>
-        <h3> {{ name1 }} </h3>
-    </div>
-
-    <div>
-        <h3> {{ aPasswordMethod('abc123') }} </h3>
-    </div>
-
-    <div>
-        <h3> {{ myBoolean }} </h3>
-        <button v-on:click="toggleMethod()"> 
-          切換 </button>
-    </div>
-
-    <div>
-        <h3> {{ aPlusMethod() }} </h3>
-    </div>
-
-    <div>
-        <h3> {{ allData }} </h3>
-    </div>
-
+    <info-card
+        name="Tom"
+        phone-number="0912345678"
+        email-address="test@gmail.com"
+        :is-favorite="false"
+    ></info-card>
 </template>
 
 <script>
+    import InfoCard from './components/UI/InfoCard.vue';
     export default{
+        components:{
+            InfoCard
+        },
         data() {
             return {
                 name1: 'value1',
