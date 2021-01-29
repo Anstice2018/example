@@ -7,13 +7,10 @@
         v-on:toggle-method="changeStatusMethod()"
     ></info-card>
 </template>
-
 <script>
     import InfoCard from './components/UI/InfoCard.vue';
     export default{
-        components:{
-            InfoCard
-        },
+        components:{ InfoCard },
         data() {
             return {
                 isFavorite: false
