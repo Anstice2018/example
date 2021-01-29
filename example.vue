@@ -3,7 +3,8 @@
         name="Tom"
         phone-number="0912345678"
         email-address="test@gmail.com"
-        :is-favorite="false"
+        v-bind:is-favorite="isFavorite"
+        v-on:toggle-method="changeStatusMethod()"
     ></info-card>
 </template>
 
@@ -15,33 +16,12 @@
         },
         data() {
             return {
-                name1: 'value1',
-                name2: 'value2',
-                myBoolean: true,
-                myNumber: 1
+                isFavorite: false
             }
         },
         methods: {
-            aPasswordMethod(someText){
-                if (someText === 'abc123'){
-                  return 'success';
-                }else{
-                  return 'failed';
-                }
-            },
-            toggleMethod() {
-                this.myBoolean = !this.myBoolean;
-            }
-        },
-        computed: {
-            allData() {
-                console.log('allData had been triggered!');
-                return this.name1 + this.name2;
-            }
-        },
-        watch: {
-            myBoolean(){
-                alert('myBoolean had been changed!');
+            changeStatusMethod(){
+                this.isFavorite = !this.isFavorite;
             }
         }
     };
